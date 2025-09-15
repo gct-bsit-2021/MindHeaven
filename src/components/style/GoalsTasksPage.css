@@ -1,0 +1,177 @@
+:root {
+  --background-color: #F4EAE1;
+  --main-color: #0c2f37;
+  --secondary-color: #F9F9F9;
+  --text-color: #838383;
+  --accent-color: #456445;
+  --white-color: #FFFFFF;
+  --divider-color: #EEEDED;
+  --dark-divider-color: #FFFFFF1A;
+  --default-font: "Sora", sans-serif;
+  --accent-font: "Marcellus", serif;
+  --button-gradient: linear-gradient(135deg, #CE5F61, #e0ad42);
+  --button-base: rgb(224, 173, 66);
+}
+
+/* =========================
+   Goals Page Wrapper
+========================= */
+.goals-page {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: var(--default-font);
+  background: var(--background-color);
+}
+
+/* =========================
+   Headings
+========================= */
+.goals-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: var(--accent-font);
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* =========================
+   Sections
+========================= */
+.tasks-section,
+.goals-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* =========================
+   Inputs
+========================= */
+input[type="text"] {
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  margin: 5px;
+  font-size: 1rem;
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white-color);
+  background: var(--button-base);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+button:hover {
+  background: var(--button-gradient);
+  transform: scale(1.05);
+}
+
+/* =========================
+   Task / Goal Cards
+========================= */
+.tasks-section h2 , .goals-section h2{
+  font-size: 30px;
+}
+
+
+.tasks-section ul, .goal-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.tasks-section li,
+.goal-card li {
+  padding: 10px 15px;
+  background: var(--white-color);
+  margin-bottom: 10px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+}
+
+.goal-card li span {
+  color: #000; /* visible by default */
+}
+
+.goal-card li.completed span {
+  text-decoration: line-through;
+  color: #888; /* faded when completed */
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+.goals-section input[type="text"]{
+  color:var(--main-color) !important;
+  font-weight: 400;
+  font-size: 18px !important;
+}
+.goal-card {
+  background: var(--main-color);
+  color: var(--white-color);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 0.4s ease;
+}
+
+/* =========================
+   Progress Bars
+========================= */
+.progress-bar {
+  background: var(--secondary-color);
+  border-radius: 12px;
+  height: 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: width 0.5s ease;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
