@@ -29,7 +29,7 @@ MindHeaven is a personalized lifestyle web application that helps users discover
 
 Clone the repository:
 
-git clone https://github.com/username/mindheaven.git
+git clone git@github.com:gct-bsit-2021/MindHeaven.git
 cd mindheaven
 
 Install dependencies:
